@@ -13,7 +13,7 @@ public class HttpClientPetTest
     public async Task ListaPetsDeveRetornarUmaListaNaoVazia()
     {
         //Arrange
-        var httpClient = ApiServiceMockBuilder.GetMock(@"
+        var httpClient = HttpClientMockBuilder.GetMock(@"
                      [
                         {
                             ""id"": ""ed48920c-5adb-4684-9b8f-ba8a94775a11"",

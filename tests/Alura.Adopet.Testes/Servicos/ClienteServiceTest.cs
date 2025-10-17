@@ -9,7 +9,7 @@ public class ClienteServiceTest
     public async Task DadaRespostaComVariosClientesDeveRetornarListaNaoVazia()
     {
         //Arrange
-        var mock = ApiServiceMockBuilder
+        var mock = HttpClientMockBuilder
             .GetMock(@"
                 [
                     {
