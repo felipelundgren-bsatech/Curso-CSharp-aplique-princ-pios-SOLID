@@ -38,12 +38,9 @@ namespace Alura.Adopet.Console.UI
                 case SuccessWithDocs d:
                     ExibeDocumentacao(d);
                     break;
-
                 case SuccessWithClientes c:
                     ExibeClientes(c);
                     break;
-
-
             }
         }
 

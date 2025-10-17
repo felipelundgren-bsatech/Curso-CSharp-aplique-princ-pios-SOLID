@@ -1,7 +1,7 @@
 ﻿using Alura.Adopet.Console.Servicos.Http;
 using Alura.Adopet.Console.Servicos.Arquivos;
 using System.Reflection;
-using Alura.Adopet.Console.Extension;
+using Alura.Adopet.Console.Extensions;
 
 namespace Alura.Adopet.Console.Comandos;
 
@@ -15,24 +15,14 @@ public static class ComandosFactory
         }
         var comando = argumentos[0];
         Type? tipoRetornado = Assembly.GetExecutingAssembly().GetTipoComando(comando);
-        switch (comando)
-        {
-            case "import":
-                return new ImportFactory().CriarComando(argumentos);
 
-            case "import-clientes":
-                return new ImportClientesFactory().CriarComando(argumentos);
+        var listaDeFabricas = Assembly.GetExecutingAssembly().GetFabricas();
 
-            case "list":
-                return new ListFactory().CriarComando(argumentos);
+        var fabrica = listaDeFabricas.FirstOrDefault(f => f!.ConsegueCriarOTipo(tipoRetornado));
 
-            case "show":
-                return new ShowFactory().CriarComando(argumentos);
+        if (fabrica is null) return null;
 
-            case "help":
-                return new HelpFactory().CriarComando(argumentos);
+        return fabrica.CriarComando(argumentos);
 
-            default: return null;
-        }           
     }
 }

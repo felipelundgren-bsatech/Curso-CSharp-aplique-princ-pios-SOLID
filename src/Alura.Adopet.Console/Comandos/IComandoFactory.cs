@@ -1,7 +1,6 @@
-﻿
-namespace Alura.Adopet.Console.Comandos;
-
-internal interface IComandoFactory
+﻿namespace Alura.Adopet.Console.Comandos;
+public interface IComandoFactory
 {
-    IComando? CriarComando (string[] argumentos);
+    bool ConsegueCriarOTipo(Type? tipoComando);
+    IComando? CriarComando(string[] argumentos);
 }

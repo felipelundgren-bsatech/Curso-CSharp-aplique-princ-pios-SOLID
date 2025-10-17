@@ -1,6 +1,4 @@
-﻿//ImportTest
-
-using Alura.Adopet.Console.Comandos;
+﻿using Alura.Adopet.Console.Comandos;
 using Alura.Adopet.Console.Modelos;
 using Alura.Adopet.Console.Results;
 using Alura.Adopet.Testes.Builder;
@@ -69,5 +67,7 @@ public class ImportTest
         var sucesso = (SuccessWithPets)resultado.Successes[0];
         Assert.Equal("Lima", sucesso.Data.First().Nome);
     }
+
+
 
 }

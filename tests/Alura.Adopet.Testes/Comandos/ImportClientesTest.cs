@@ -18,6 +18,7 @@ public class ImportClientesTest
             email: "jeni@example.org"
         );
         listaDeClientes.Add(cliente);
+
         var leitorDeArquivo = LeitorDeArquivosMockBuilder.GetMock(listaDeClientes);
 
         var mockService = ApiServiceMockBuilder.GetMock<Cliente>();

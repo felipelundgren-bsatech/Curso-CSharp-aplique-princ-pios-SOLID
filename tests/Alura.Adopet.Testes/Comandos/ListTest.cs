@@ -1,6 +1,4 @@
-﻿
-//ListTest
-using Alura.Adopet.Console.Modelos;
+﻿using Alura.Adopet.Console.Modelos;
 using Alura.Adopet.Console.Results;
 using Alura.Adopet.Testes.Builder;
 
@@ -27,5 +25,6 @@ public class ListTest
         var resultado = (SuccessWithPets)retorno.Successes[0];
         Assert.Single(resultado.Data);
     }
+
 
 }
