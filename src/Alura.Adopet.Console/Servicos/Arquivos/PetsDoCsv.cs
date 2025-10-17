@@ -1,8 +1,6 @@
-﻿
-using Alura.Adopet.Console.Modelos;
+﻿using Alura.Adopet.Console.Modelos;
 
 namespace Alura.Adopet.Console.Servicos.Arquivos;
-
 public class PetsDoCsv : LeitorDeArquivoCsv<Pet>
 {
     public PetsDoCsv(string caminhoDoArquivoASerLido) : base(caminhoDoArquivoASerLido)
@@ -20,6 +18,6 @@ public class PetsDoCsv : LeitorDeArquivoCsv<Pet>
 
         TipoPet tipo = tipoPet == 1 ? TipoPet.Gato : TipoPet.Cachorro;
 
-        return (new Pet(petId, propriedades[1], tipo));
+       return new Pet(petId, propriedades[1], tipo);
     }
 }

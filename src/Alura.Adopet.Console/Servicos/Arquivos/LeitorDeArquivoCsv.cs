@@ -32,5 +32,4 @@ public abstract class LeitorDeArquivoCsv<T>: ILeitorDeArquivos<T>
     }
 
     public abstract T CriarDaLinhaCsv(string linha);
-    
 }

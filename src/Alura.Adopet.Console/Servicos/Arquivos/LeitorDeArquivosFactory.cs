@@ -16,6 +16,7 @@ public static class LeitorDeArquivosFactory
             default: return null;
         }
     }
+
     public static ILeitorDeArquivos<Cliente>? CreateClienteFrom(string caminhoArquivo)
     {
         var extensao = Path.GetExtension(caminhoArquivo);
@@ -29,6 +30,3 @@ public static class LeitorDeArquivosFactory
         }
     }
 }
-
-   
-
